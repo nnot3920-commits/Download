@@ -265,7 +265,7 @@
         <div class="brand-title">ShaktiPay</div>
         <div class="brand-sub">Earn Money Online</div>
       </div>
-      <a href="https://github.com/nnot3920-commits/Download/raw/main/shaktipay.apk" download="shaktipay.apk" class="btn-top-download apk-download-btn">Download</a>
+      <a href="https://github.com/nnot3920-commits/Download/releases/download/v1.0/shaktipay.apk" target="_blank" rel="noopener noreferrer" class="btn-top-download apk-download-btn">Download</a>
     </header>
 
     <!-- Hero Section -->
@@ -278,7 +278,7 @@
         class="hero-img"
       />
 
-      <a href="https://github.com/nnot3920-commits/Download/raw/main/shaktipay.apk" download="shaktipay.apk" class="btn-main-download apk-download-btn">Download</a>
+      <a href="https://github.com/nnot3920-commits/Download/releases/download/v1.0/shaktipay.apk" target="_blank" rel="noopener noreferrer" class="btn-main-download apk-download-btn">Download</a>
     </section>
 
     <!-- Earn Money Online Section -->
@@ -321,7 +321,7 @@
         </div>
       </div>
 
-      <a href="https://github.com/nnot3920-commits/Download/raw/main/shaktipay.apk" download="shaktipay.apk" class="btn-main-download apk-download-btn" style="margin-bottom: 2px;">Download</a>
+      <a href="https://github.com/nnot3920-commits/Download/releases/download/v1.0/shaktipay.apk" target="_blank" rel="noopener noreferrer" class="btn-main-download apk-download-btn" style="margin-bottom: 2px;">Download</a>
     </section>
 
     <!-- Why Choose Our Platform -->
@@ -369,11 +369,13 @@
   </main>
 
   <script>
-    const APK_FILE_URL = "https://github.com/nnot3920-commits/Download/raw/main/shaktipay.apk";
+    const APK_FILE_URL = "https://github.com/nnot3920-commits/Download/releases/download/v1.0/shaktipay.apk";
 
     document.querySelectorAll(".apk-download-btn").forEach((btn) => {
       btn.setAttribute("href", APK_FILE_URL);
-      btn.setAttribute("download", "shaktipay.apk");
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener noreferrer");
+      btn.removeAttribute("download");
     });
   </script>
 </body>
