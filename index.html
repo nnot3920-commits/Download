@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShaktiPay - Download</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #070d1a;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 440px;
+      background: linear-gradient(180deg, #091326 0%, #0b162c 45%, #070d1a 100%);
+      padding: 14px 14px 28px;
+    }
+
+    /* Top Header */
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 4px 16px;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: #9fb0c7;
+      margin-top: 2px;
+    }
+
+    .btn-top-download {
+      background: #00d067;
+      color: #052314;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 18px;
+      border-radius: 7px;
+      box-shadow: 0 4px 14px rgba(0, 208, 103, 0.28);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 8px 4px 6px;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.28;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .hero-img {
+      display: block;
+      width: 190px;
+      max-width: 75%;
+      height: auto;
+      margin: 0 auto 16px;
+      object-fit: contain;
+    }
+
+    /* Full Width Green Download Button */
+    .btn-main-download {
+      display: block;
+      width: 100%;
+      background: linear-gradient(180deg, #00dc6e 0%, #00c460 100%);
+      color: #042213;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+      text-align: center;
+      padding: 13px 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 208, 103, 0.25);
+      margin: 10px 0 14px;
+    }
+
+    /* Section Panels */
+    .panel {
+      background: rgba(23, 35, 58, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    .panel-banner {
+      background: linear-gradient(180deg, #3b4b68, #27354f);
+      color: #f8fafc;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .light-banner {
+      background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+      color: #1e293b;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* 3 Features Row */
+    .features-box {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 14px 8px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .feature-icon-wrap {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 8px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    .feature-icon-img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .feature-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+
+    .feature-sub {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 3px;
+      line-height: 1.25;
+    }
+
+    /* Why Choose Us Points */
+    .reason-item {
+      margin-bottom: 12px;
+    }
+
+    .reason-item:last-of-type {
+      margin-bottom: 10px;
+    }
+
+    .reason-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 3px;
+    }
+
+    .reason-desc {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .trust-strip {
+      background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+      color: #1e293b;
+      text-align: center;
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      padding: 9px 10px;
+      border-radius: 8px;
+    }
+
+    /* Rebate Levels */
+    .rebate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .level-card {
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .level-a {
+      background: linear-gradient(180deg, #4b8df8, #2f6ee5);
+    }
+
+    .level-b {
+      background: linear-gradient(180deg, #f2749b, #df5380);
+    }
+
+    .level-label {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .level-percent {
+      background: #ffffff;
+      color: #1e293b;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .level-foot {
+      font-size: 11px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- Top Header -->
+    <header class="top-header">
+      <div>
+        <div class="brand-title">ShaktiPay</div>
+        <div class="brand-sub">Earn Money Online</div>
+      </div>
+      <a href="Shaktipay.apk" download="Shaktipay.apk" class="btn-top-download apk-download-btn">Download</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>TO GET RUPEE<br />BY EASY TASK</h1>
+
+      <img
+        src="https://skdown.k8zora.net/static/icon/hero.png"
+        alt="Hero Logo"
+        class="hero-img"
+      />
+
+      <a href="Shaktipay.apk" download="Shaktipay.apk" class="btn-main-download apk-download-btn">Download</a>
+    </section>
+
+    <!-- Earn Money Online Section -->
+    <section class="panel">
+      <div class="panel-banner">Earn Money Online</div>
+
+      <div class="features-box">
+        <div>
+          <div class="feature-icon-wrap">
+            <img
+              src="https://skdown.k8zora.net/static/icon/easy.png"
+              alt="Easy task"
+              class="feature-icon-img"
+            />
+          </div>
+          <div class="feature-title">Easy task</div>
+          <div class="feature-sub">To get Rupee</div>
+        </div>
+        <div>
+          <div class="feature-icon-wrap">
+            <img
+              src="https://skdown.k8zora.net/static/icon/zap-fast.png"
+              alt="Super-fast"
+              class="feature-icon-img"
+            />
+          </div>
+          <div class="feature-title">Super-fast</div>
+          <div class="feature-sub">Withdrawal</div>
+        </div>
+        <div>
+          <div class="feature-icon-wrap">
+            <img
+              src="https://skdown.k8zora.net/static/icon/referer.png"
+              alt="Refer"
+              class="feature-icon-img"
+            />
+          </div>
+          <div class="feature-title">Refer</div>
+          <div class="feature-sub">And Earn</div>
+        </div>
+      </div>
+
+      <a href="Shaktipay.apk" download="Shaktipay.apk" class="btn-main-download apk-download-btn" style="margin-bottom: 2px;">Download</a>
+    </section>
+
+    <!-- Why Choose Our Platform -->
+    <section class="panel">
+      <div class="light-banner">Why choose our platform?</div>
+
+      <div class="reason-item">
+        <div class="reason-title">Trusted Protection:</div>
+        <div class="reason-desc">Backed by industry-recognized partners, delivering a stable and reliable earning environment.</div>
+      </div>
+
+      <div class="reason-item">
+        <div class="reason-title">Quick experience:</div>
+        <div class="reason-desc">Smooth task flow, easy money earning.</div>
+      </div>
+
+      <div class="reason-item">
+        <div class="reason-title">Massive orders:</div>
+        <div class="reason-desc">Diverse tasks, suitable for both part-time and full-time work!</div>
+      </div>
+
+      <div class="trust-strip">
+        Join us and earn money efficiently. Safer, faster, more reliable!
+      </div>
+    </section>
+
+    <!-- Recharge Rebate -->
+    <section class="panel" style="margin-bottom: 0;">
+      <div class="light-banner">Recharge rebate</div>
+
+      <div class="rebate-grid">
+        <div class="level-card level-a">
+          <div class="level-label">level A</div>
+          <div class="level-percent">3.6%</div>
+          <div class="level-foot">Profit Ratio</div>
+        </div>
+
+        <div class="level-card level-b">
+          <div class="level-label">level B</div>
+          <div class="level-percent">0.4%</div>
+          <div class="level-foot">Profit Ratio</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // GitHub Release se mila Shaktipay.apk ka direct download link yahan paste karein:
+    const APK_FILE_URL = "https://github.com/nnot3920-commits/Download/shaktipay.apk";
+
+    document.querySelectorAll(".apk-download-btn").forEach((btn) => {
+      btn.setAttribute("href", APK_FILE_URL);
+      btn.setAttribute("download", "Shaktipay.apk");
+    });
+  </script>
+</body>
+</html>
